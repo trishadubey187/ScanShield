@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ScamShield | Cyber Security Scanner</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            🛡️
+        </div>
+
+        <div>
+
+            <h1>
+                Scam<span>Shield</span>
+            </h1>
+
+            <p>
+                SCAN • DETECT • STAY SAFE
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="header-right">
+
+        🛡️ Safer Internet
+        <span>|</span>
+        Smarter You
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🛡 ONLINE SCAM DETECTION PLATFORM
+            </div>
+
+
+            <h2>
+
+                Stop Scams
+
+                <span>
+                    Before They Stop You
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Scan suspicious links, emails, apps and
+                messages for common scam indicators and
+                learn how to protect yourself online.
+
+            </p>
+
+
+            <div class="features">
+
+                <div class="feature">
+                    <span>⚡</span>
+                    Fast Scan
+                </div>
+
+                <div class="feature">
+                    <span>🧠</span>
+                    Smart Analysis
+                </div>
+
+                <div class="feature">
+                    <span>🔒</span>
+                    Privacy First
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Cyber decoration -->
+
+        <div class="cyber-circle">
+
+            <div class="cyber-ring"></div>
+
+            <div class="hacker">
+                👤
+            </div>
+
+            <div class="terminal">
+                ACCESS
+                <br>
+                PROTECTED
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SCANNER ================= -->
+
+    <section class="scanner">
+
+
+        <div class="scanner-title">
+
+            <div class="scanner-title-icon">
+                🔍
+            </div>
+
+            <div>
+
+                <h2>
+                    Security Scanner
+                </h2>
+
+                <p>
+                    Select what you want to check.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Scan types -->
+
+        <div class="scan-buttons">
+
+
+            <button
+                class="scan-option active"
+                onclick="selectScanner('link', this)">
+
+                <span class="big-icon">🔗</span>
+
+                <strong>Link</strong>
+
+                <small>
+                    Check suspicious URLs
+                </small>
+
+            </button>
+
+
+
+            <button
+                class="scan-option"
+                onclick="selectScanner('email', this)">
+
+                <span class="big-icon">📧</span>
+
+                <strong>Email</strong>
+
+                <small>
+                    Check suspicious emails
+                </small>
+
+            </button>
+
+
+
+            <button
+                class="scan-option"
+                onclick="selectScanner('app', this)">
+
+                <span class="big-icon">📱</span>
+
+                <strong>App</strong>
+
+                <small>
+                    Check app information
+                </small>
+
+            </button>
+
+
+
+            <button
+                class="scan-option"
+                onclick="selectScanner('message', this)">
+
+                <span class="big-icon">💬</span>
+
+                <strong>Message</strong>
+
+                <small>
+                    Check SMS / messages
+                </small>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- Input -->
+
+        <textarea
+            id="inputText"
+            maxlength="3000"
+            placeholder="Paste a suspicious link here..."
+        ></textarea>
+
+
+        <div class="character-count">
+
+            <span id="charCount">
+                0
+            </span>
+
+            / 3000
+
+        </div>
+
+
+
+        <!-- Scan -->
+
+        <button
+            class="scan-btn"
+            onclick="scanInput()">
+
+            🔍
+            <span>Scan Now</span>
+            →
+
+        </button>
+
+
+
+        <!-- Result -->
+
+        <div
+            id="result"
+            class="result"
+            style="display:none;">
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================= AI ASSISTANT ================= -->
+
+    <section class="ai-section">
+
+
+        <div class="section-heading">
+
+            <div class="ai-icon">
+                🤖
+            </div>
+
+            <div>
+
+                <h2>
+                    ScamShield AI Assistant
+                </h2>
+
+                <p>
+                    Ask cybersecurity and online-safety questions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Chat window -->
+
+        <div
+            id="chatBox"
+            class="chat-box">
+
+
+            <div class="chat-message bot">
+
+                <div class="avatar">
+                    🤖
+                </div>
+
+                <div class="message-content">
+
+                    <strong>
+                        ScamShield AI
+                    </strong>
+
+                    <p>
+
+                        Hi! 👋 I'm your cybersecurity assistant.
+
+                        Ask me about phishing, fake links,
+                        suspicious emails, OTP scams,
+                        account security, malware and more.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Quick questions -->
+
+        <div class="quick-questions">
+
+            <button onclick="quickQuestion('What is phishing?')">
+                🎣 What is phishing?
+            </button>
+
+            <button onclick="quickQuestion('How can I identify a fake website?')">
+                🌐 Fake website?
+            </button>
+
+            <button onclick="quickQuestion('What should I do if someone asks for my OTP?')">
+                🔐 OTP safety?
+            </button>
+
+            <button onclick="quickQuestion('How can I protect my online accounts?')">
+                🛡️ Protect my account
+            </button>
+
+        </div>
+
+
+
+        <!-- Chat input -->
+
+        <div class="chat-input-area">
+
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Ask any cybersecurity question..."
+                onkeydown="handleChatKey(event)"
+            >
+
+            <button onclick="sendMessage()">
+                ➤
+            </button>
+
+        </div>
+
+
+        <p class="ai-note">
+
+            ⚠️ Educational assistant. It provides general
+            security guidance and does not guarantee that
+            content is safe or malicious.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- ================= SAFETY TIPS ================= -->
+
+    <section class="tips-section">
+
+
+        <div class="section-heading">
+
+            <div class="tips-main-icon">
+                🛡️
+            </div>
+
+            <div>
+
+                <h2>
+                    How to Protect Yourself
+                </h2>
+
+                <p>
+                    Simple habits that can reduce your
+                    risk of online scams.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="tips-grid">
+
+
+            <div class="tip-card">
+
+                <div class="tip-number">
+                    01
+                </div>
+
+                <div class="tip-icon">
+                    🔗
+                </div>
+
+                <h3>
+                    Check Links
+                </h3>
+
+                <p>
+
+                    Carefully check the domain before
+                    opening an unfamiliar link.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="tip-card">
+
+                <div class="tip-number">
+                    02
+                </div>
+
+                <div class="tip-icon">
+                    🔐
+                </div>
+
+                <h3>
+                    Never Share OTP
+                </h3>
+
+                <p>
+
+                    Never share OTPs, passwords,
+                    PINs or verification codes
+                    with unexpected callers or messages.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="tip-card">
+
+                <div class="tip-number">
+                    03
+                </div>
+
+                <div class="tip-icon">
+                    📧
+                </div>
+
+                <h3>
+                    Verify the Sender
+                </h3>
+
+                <p>
+
+                    Check the actual email address,
+                    not just the displayed name.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="tip-card">
+
+                <div class="tip-number">
+                    04
+                </div>
+
+                <div class="tip-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Use Trusted Apps
+                </h3>
+
+                <p>
+
+                    Prefer official app stores and
+                    verify the developer before installing.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="tip-card">
+
+                <div class="tip-number">
+                    05
+                </div>
+
+                <div class="tip-icon">
+                    ⚠️
+                </div>
+
+                <h3>
+                    Don't Panic
+                </h3>
+
+                <p>
+
+                    Scammers often create urgency.
+                    Stop and independently verify.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="tip-card">
+
+                <div class="tip-number">
+                    06
+                </div>
+
+                <div class="tip-icon">
+                    💳
+                </div>
+
+                <h3>
+                    Verify Payments
+                </h3>
+
+                <p>
+
+                    Don't transfer money because of
+                    an unexpected message or call.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= SECURITY AWARENESS ================= -->
+
+    <section class="awareness">
+
+
+        <div class="awareness-title">
+
+            <span>
+                🚨
+            </span>
+
+            <div>
+
+                <h2>
+                    Common Online Threats
+                </h2>
+
+                <p>
+                    Learn what scammers commonly use.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="threats">
+
+
+            <div>
+                <span>🎣</span>
+                <strong>Phishing</strong>
+                <small>
+                    Fake websites and messages
+                </small>
+            </div>
+
+
+            <div>
+                <span>👤</span>
+                <strong>Identity Theft</strong>
+                <small>
+                    Misuse of personal information
+                </small>
+            </div>
+
+
+            <div>
+                <span>💰</span>
+                <strong>Payment Scams</strong>
+                <small>
+                    Fraudulent payment requests
+                </small>
+            </div>
+
+
+            <div>
+                <span>🦠</span>
+                <strong>Malware</strong>
+                <small>
+                    Harmful or unwanted software
+                </small>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🛡️ ScamShield
+    </div>
+
+    <p>
+        Think Before You Click • Stay Alert • Stay Safe
+    </p>
+
+    <small>
+        © 2026 ScamShield | Educational Cybersecurity Project
+    </small>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
